@@ -69,7 +69,14 @@ public class Main {
         private void compose(){
 
             try{
-                doc = getHtml("daniilhacker@mail.ru", "199617");
+                if(dw.isSunday()){
+                    int week = parser.parseWeek(getHtml("daniilhacker@mail.ru", "199617"));
+                    doc = getNextDayHtml("daniilhacker@mail.ru", "199617", week+1);
+
+                } else {
+                    doc = getHtml("daniilhacker@mail.ru", "199617");
+                }
+
 
             }catch (IOException e){
 
@@ -183,6 +190,46 @@ public class Main {
 
             //get schedule html
             return Jsoup.connect("https://cabs.itut.ru/cabinet/project/cabinet/forms/raspisanie.php")
+                    .cookies(cookies)
+                    .userAgent("Mozilla")
+                    .method(Connection.Method.GET)
+                    .get();
+        }
+
+        private Document getNextDayHtml(String login,String pass, int week) throws IOException{
+
+            Map<String,String> cookies = getMidenCookies();
+
+            //push login
+            Jsoup.connect("https://cabs.itut.ru/cabinet/lib/updatesession.php?key=users&value="+login)
+                    .cookies(cookies)
+                    .userAgent("Mozilla")
+                    .method(Connection.Method.POST)
+                    .execute();
+
+            //push password
+            Jsoup.connect("https://cabs.itut.ru/cabinet/lib/updatesession.php?key=parole&value="+pass)
+                    .cookies(cookies)
+                    .userAgent("Mozilla")
+                    .method(Connection.Method.POST)
+                    .execute();
+
+            //check for correct login and password
+            Jsoup.connect("https://cabs.itut.ru/cabinet/lib/autentification.php")
+                    .cookies(cookies)
+                    .userAgent("Mozilla")
+                    .method(Connection.Method.POST)
+                    .execute();
+
+            //log in to cabinet
+            Jsoup.connect("https://cabs.itut.ru/cabinet/?login=yes")
+                    .cookies(cookies)
+                    .userAgent("Mozilla")
+                    .method(Connection.Method.POST)
+                    .get();
+
+            //get schedule html
+            return Jsoup.connect("https://cabs.itut.ru/cabinet/project/cabinet/forms/raspisanie.php?week="+week)
                     .cookies(cookies)
                     .userAgent("Mozilla")
                     .method(Connection.Method.GET)

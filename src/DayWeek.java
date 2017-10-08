@@ -48,6 +48,14 @@ public class DayWeek {
 
     }
 
+    public boolean isSunday(){
+        if(newCal.get(Calendar.DAY_OF_WEEK)==1){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public boolean isTuesday(){
         if(newCal.get(Calendar.DAY_OF_WEEK)==3){
             return true;

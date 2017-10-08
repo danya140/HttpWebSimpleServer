@@ -41,6 +41,7 @@ public class Parser {
 
     public int parseWeek(Document doc){
         docum = doc;
+        str = doc.outerHtml();
         String string;
         string = str.substring(str.indexOf("№"),str.indexOf("<strong"));
         string = string.substring(1,string.length()-1);
