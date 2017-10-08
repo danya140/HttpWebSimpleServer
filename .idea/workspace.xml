@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6392eb-2ff8-4bbe-98cd-026e66734a21" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DayWeek.java" afterPath="$PROJECT_DIR$/src/DayWeek.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -250,12 +246,20 @@
       <workItem from="1505922014987" duration="722000" />
       <workItem from="1506969926922" duration="1280000" />
       <workItem from="1507489734174" duration="743000" />
-      <workItem from="1507471182245" duration="612000" />
+      <workItem from="1507471182245" duration="1120000" />
     </task>
+    <task id="LOCAL-00001" summary="add function for showing next week schedule on sunday">
+      <created>1507471882371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507471882371</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30574000" />
+    <option name="totallyTimeSpent" value="31082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -292,6 +296,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add function for showing next week schedule on sunday" />
+    <option name="LAST_COMMIT_MESSAGE" value="add function for showing next week schedule on sunday" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
