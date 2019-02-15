@@ -1,2 +1,2 @@
 # HttpWebSimpleServer
-Web-sarvar для отображения расписания на неделю
+Web-server для отображения расписания на неделю
